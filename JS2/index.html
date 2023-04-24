@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>1 UZDUOTIS</h1>
+    <div id="output1"></div>
+
+    <script>
+
+        //Susikuriu masyva kuriame laikoma masinos informacija
+
+        let output1 = " "
+        const car = ["Audi", "A4", "1997", "benzinas"]; 
+
+        //suformuoju isvedima
+
+        output1 += "Marke: " + car[0] + "<br>";
+        output1 += "Modelis: " + car[1] + "<br>";
+        output1 += "Metai: " + car[2] + "<br>";
+        output1 += "Kuro tipas: " + car[3] + "<br>"; 
+
+        document.getElementById("output1").innerHTML = output1; // Isvedu
+    </script>
+
+    <h1>2 UZDUOTIS</h1>
+    <div id="output2"></div>
+
+    <script>
+
+        // Sukuriamas masyvas su kintamaisiais
+
+        let output2 = " "
+        const info = [ 
+           "Nojus", 
+           "Kojus",
+           "nojus55@gmail.com",
+           "865595654",
+           "Vilniaus g., 66-10",
+           "98547",
+           "Pirmo pirkejo duomenys"
+            ];
+            
+        //Suformuoju isvedima
+
+        output2 += "Vardas: " + info[0] + "<br>";
+        output2 += "Pavarde: " + info[1] + "<br>";
+        output2 += "Gmail: " + info[2] + "<br>";
+        output2 += "Telefonas: " + info[3] + "<br>";
+        output2 += "Adresas: " + info[4] + "<br>";
+        output2 += "Pasto kodas: " + info[5] + "<br>";
+        output2 += "Komentaras: " + info[6] + "<br>"; 
+        document.getElementById("output2").innerHTML = output2; // Isvedu
+
+    </script>
+
+    <h1>3 UZDUOTIS</h1>
+    <div id="output3"></div>
+
+    <script>
+        
+        //Susikuriu objekta su kintamaisiais
+
+        let output3 = " "
+        const info2 = {  
+            Firstname: "Nojus",
+            Lastname: "Kojus",
+            Gmail: "nojus55@gmail.com",
+            // Phone: "865595654",
+            Address: "Vilniaus g., 66-10",
+            Postcode: "98547",
+            Comment: "Pirmo pirkejo duomenys"
+        };
+
+        //Suformuoju isvedima su salyga, kad jei nebutu telefono numerio, isvestu, kad jo nera
+
+        output3 += "<p>Vardas: " + info2.Firstname + "<br>"; 
+        output3 += "Pavarde: " + info2.Lastname + "<br>";
+        output3 += "Gmail: " + info2.Gmail + "<br>";
+        if (info2.Phone) {
+            output3 += "Telefonas: " + info2.Phone + "<br>";
+        } else {
+            output3 += "Telefonas: " + "Nerastas ragelis" + "<br>";
+        }
+        
+        output3 += "Adresas: " + info2.Address + "<br>";
+        output3 += "Pasto kodas: " + info2.Postcode + "<br>";
+        output3 += "Komentaras: " + info2.Comment + "</p><br>";
+        
+        document.getElementById("output3").innerHTML = output3; // Isvedu
+
+    </script>
+
+    <h1>4 UZDUOTIS</h1>
+    <div id="output4"></div>
+
+    <script>
+
+        //Susikuriau objekta, kuriame yra masyvas su nuotraukomis
+
+        let output4 = " ";
+        const product = {
+            name: "MISOKO PATINŲ DAUGKARTINĖS SAUSKELNĖS",
+            price: "11.99",
+            description: "Daugkartinio naudojimo sauskelnės patinams MISOKO – greitas ir patogus sprendimas, neleidžiantis augintiniui šlapintis namuose.",
+            images: ["img/1.webp", "img/2.webp"],
+            link: "https://www.kika.lt/katalogas/misoko-patinu-daugkartines-sauskelnes-3/"
+        }
+
+        //Suformavau isvedima, su salyga jei nebutu pirmos nuotraukos tada ikeltu antra ir atvirksciai
+
+        output4 += product.name + "<br>"
+        if (product.images) {
+            output4 += "<img src='" + product.images[0] + "' width='300' height='200'" + "<img><br>";
+            output4 += "<img src='" + product.images[1] + "' width='300' height='200'" + "<img><br>";
+        } else if (product.images) {
+            output4 += "<img src='" + product.images[1] + "' width='300' height='200'" + "<img><br>";
+        } else { 
+            output4 += "<img src='" + product.images[0] + "' width='300' height='200'" + "<img><br>";
+        }
+        output4 += "<a href='" + product.link + "'>" + product.price + "</a>";
+        output4 += "<br><br><h3>Aprasymas:</h3>" +  product.description
+
+        document.getElementById("output4").innerHTML = output4; // isvedu
+
+    </script>
+
+    <h1>5 UZDUOTIS</h1>
+    <div id="output5"></div>
+
+    <script>
+
+        //Susikuriu masyva kuriame yra objektai kurie laiko visa informacija apie prekes
+
+        let output5 = " ";
+        const shop = [
+            {
+               name: "It Takes Two",
+               price: "25",
+               description: "Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.",
+               image: "img/it-takes-two.jpg",
+               link: "https://gameroom.lt/lt/microsoft-xbox/products/it-takes-two-5608",
+            },
+            {
+                name: "NBA 2K23",
+                price: "30",
+                description: "ANSWER THE CALL TO GREATNESS - Rise to the occasion and realize your full potential in NBA 2K23.",
+                image: "img/nba-2k23.jpg",
+                link: "https://gameroom.lt/lt/xbox-one-zaidimai/products/nba-2k23-9815"
+            },
+            {
+                name: "Hogwarts Legacy",
+                price: "55",
+                description: "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books.",
+                image: "img/hogwarts-legacy-preorder-bonus.jpg",
+                link: "https://gameroom.lt/lt/xbox-one-zaidimai/products/hogwarts-legacy-preorder-bonus-10139"
+            },
+            {
+                name: "GTA V",
+                price: "20",
+                description: "he Grand Theft Auto V: Premium Online Edition includes the complete Grand Theft Auto V story experience.",
+                image: "img/grand-theft-auto-v-premium-edition.jpg",
+                link: "https://gameroom.lt/lt/microsoft-xbox/products/grand-theft-auto-v-premium-edition-1463"
+            },
+            {
+                name: "Cyberpunk 2077",
+                price: "30",
+                description: "Cyberpunk 2077 - tai atviro pasaulio, veiksmo ir nuotykių RPG, kurio veiksmas vyksta Nakties miesto megapolyje, kur žaidžiate kaip kibernetinio panko samdinys, įsitraukęs į kovą dėl išlikimo.",
+                image: "img/cyberpunk-2077.jpg",
+                link: "https://gameroom.lt/lt/microsoft-xbox/products/cyberpunk-2077-798"
+            }
+
+    ]
+
+        //Suformuoju isvedima su man reikalinga informacija is masyvo
+
+        output5 += "<h3>" + shop[0].name + "</h3>";
+        output5 += "<img src='" + shop[0].image + "' width='250' height='350'" + "<img><br>";
+        output5 += "<b>" + shop[0].price + "€</b><br>";
+
+        output5 += "<h3>" + shop[1].name + "</h3>";
+        output5 += "<img src='" + shop[1].image + "' width='250' height='350'" + "<img><br>";
+        output5 += "<b>" + shop[1].price + "€</b><br>";
+
+        output5 += "<h3>" + shop[2].name + "</h3>";
+        output5 += "<img src='" + shop[2].image + "' width='250' height='350'" + "<img><br>";
+        output5 += "<b>" + shop[2].price + "€</b><br>";
+
+        output5 += "<h3>" + shop[3].name + "</h3>";
+        output5 += "<img src='" + shop[3].image + "' width='250' height='350'" + "<img><br>";
+        output5 += "<b>" + shop[3].price + "€</b><br>";
+        
+        output5 += "<h3>" + shop[4].name + "</h3>";
+        output5 += "<img src='" + shop[4].image + "' width='250' height='350'" + "<img><br>";
+        output5 += "<b>" + shop[4].price + "€</b><br>";
+
+        document.getElementById("output5").innerHTML = output5; //isvedu
+
+    </script>
+</body>
+</html>

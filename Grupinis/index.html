@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+
+    <div id="uzduotis1"></div>
+
+
+    
+<script>
+
+
+let uzduotis1 = "";  // sukuriam kintamaji isvedimui
+
+function mylioskm (km = 5) {
+    
+    return km * 0.621371
+    
+};
+
+
+function milesToKilometers (ml = 5) {
+    
+  return ml * 1.60934;
+  
+};
+
+function distance(time = 10, speed = 30) {
+
+  return time * speed;
+
+}
+
+
+
+function KelvinToCelcius (cel = 5) {
+
+   return cel - 273.15;
+    
+}
+
+function power(voltage = 12, current = 5) {
+    
+  return voltage * current;
+  
+}
+
+function current(voltage = 12, resistance = 6) {
+    
+  return voltage / resistance;
+  
+}
+// sudedam visas funkcijas isvedimui
+uzduotis1 += "<h2> Gustas Siurkus, Marijus Bundulas, Aidas Salvis, Rokas Rumeika </h2>";
+uzduotis1 += "Kilometrai -> mylias = " + mylioskm() + "<br>";
+uzduotis1 += "Mylios -> kilometrus = " + milesToKilometers() + "<br>";
+uzduotis1 += "Laikas, greitis -> kelias = " + distance() + "<br>";
+uzduotis1 += "Temperatūra kelvinais -> Temperatūra celsijais = " + KelvinToCelcius() + "<br>";
+uzduotis1 += "Voltai, įtampa -> galia = " + power() + "<br>";
+uzduotis1 += "Varža, įtampa -> srovės stipris = " + current();
+
+
+
+document.getElementById("uzduotis1").innerHTML = uzduotis1;  //isvedam
+
+</script>
+    
+</body>
+</html>

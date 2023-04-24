@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>1 Uzduotis</h1>
+    <div id="output1"></div>
+
+    <script>
+
+        // Sukuriamas masyvas su 12 menesiu
+
+        let output1 = " ";
+        const months = [
+            "sausis",
+            "vasaris",
+            "kovas",
+            "balandis",
+            "geguze",
+            "birzelis",
+            "liepa",
+            "rugpjutis",
+            "rugsejis",
+            "spalis",
+            "lapkritis",
+            "gruodis"
+        ]
+
+        // Sukuriamas ciklas menesiam isvesti
+
+        for (let i = 0; i < months.length; i++) {    // Length = 12
+            output1 += months[i] + "<br>"
+        }
+
+        document.getElementById("output1").innerHTML = output1
+
+    </script>
+
+    <h1>2 Uzduotis</h1>
+    <div id="output2"></div>
+
+    <script>
+
+        let output2 = 0;
+        for (let i = 1; i <= 25 ; i++) {
+            output2 += i;
+        }
+
+        document.getElementById("output2").innerHTML = output2
+
+    </script>
+
+    <h1>3 Uzduotis</h1>
+    <div id="output3"></div>
+
+    <script>
+
+        let output3 = 0;
+
+        for (let i = 0; i <= 100; i++) {
+            if (i%5==0) {
+                output3 += i + "<br>"
+            }
+        }
+
+        document.getElementById("output3").innerHTML = output3
+
+    </script>
+
+    <h1>4 Uzduotis</h1>
+    <div id="output4"></div>
+
+    <script>
+
+        let output4 = 1;
+        let num = 3;
+        
+        for (let i = num; i >= 1; i--) {
+          output4 = output4 * i;
+        }
+
+        document.getElementById("output4").innerHTML = output4
+
+    </script>
+
+    <h1>5 Uzduotis</h1>
+    <div id="output5"></div>
+
+    <script>
+
+        output5 = " ";
+        let n = 1;
+        let i = 1;
+
+        output5 += "<table>";
+        output5 += "<tbody>";
+
+        for (let n = 1; n <= 9; n++) { 
+
+            if ((n % 3) == 1) {
+                output5 += "<tr>";
+            }
+
+            output5 += "<td>"
+
+            for (let i = 1; i <= 9; i++) {
+
+                   output5 += n + " * " + i + " = " + i * n + "<br>";
+            }
+
+            output5 += "</td>";
+
+            if ((n % 3 == 0 || n == 20)) {
+                output5 += "</tr>";
+            }
+        }
+        
+        output5 += "</tbody>";
+        output5 += "</table>";
+
+    document.getElementById("output5").innerHTML = output5
+
+    </script>
+
+    <h1>6 Uzduotis</h1>
+    <div id="output6"></div>
+
+    <script>
+
+        let output6 = " ";
+        output6 += "<table border='1' width='500' height='500' align='center' style='max-width:100%; max-height:100%;'>";
+        
+        for (let i = 1; i <= 8; i++) {
+
+            output6 += "<tr>";
+
+            for (let j = 1; j <= 8; j++) {
+
+                if ((i + j) % 2 != 0) {
+
+                    output6 += "<td bgcolor='white'></td>";
+
+                }
+
+                else {
+
+                    output6 += "<td bgcolor='black'></td>";
+
+                }
+
+            }
+
+            output6 += "</tr>";
+        }
+
+        output6 += "</table>";
+
+        document.getElementById("output6").innerHTML = output6
+
+    </script>
+
+    <h1>7 Uzduotis</h1>
+    <div id="output7"></div>
+
+    <script>
+        let output7 = " ";
+
+        const salis = {
+        "Lietuva": "Vilnius",
+        "Latvija": "Ryga",
+        "Estija": "Talinas",
+        "Belgija": "Briuselis",
+        "Danija": "Kopenhaga",
+        "Prancūzija": "Paryžius",
+        "Vokietija": "Berlynas",
+        "Portugalija": "Lisabona",
+        "Lenkija": "Varšuva",
+        "Čekija": "Praha",
+        "Graikija": "Atėnai",
+        "Italija": "Roma",
+        "Austrija": "Viena",
+    };
+
+    output7 = "<table>";
+    output7 += "<tr>";
+    output7 += "<th>";
+    output7 += "Nr."
+    output7 += "</th>"
+    output7 += "<th>"
+    output7 += "Salis"
+    output7 += "</th>"        
+    output7 += "<th>"
+    output7 += "Sostine"
+    output7 += "</th>"            
+    output7 += "</tr>" 
+
+    let number = 1
+
+    for (const country in salis) {
+
+        output7 += "<tr>";
+        output7 += "<td>" + number + "</td>" + "<td>" + country + "</td>" + "<td>" + salis[country] + "</td>";
+        output7 += "</tr>";
+
+        number++;
+    }
+
+    output7 += "</table>"
+
+        document.getElementById("output7").innerHTML = output7
+
+    </script>
+
+    <h1>8 Uzduotis</h1>
+    <div id="output8"></div>
+
+    <script>
+
+        let output8 = " ";
+
+        const salis2 = {
+        lt: ["Lietuva", "Vilnius"],
+        lv: ["Latvija", "Ryga"],
+        ee: ["Estija", "Talinas"],
+        be: ["Belgija", "Briuselis"],
+        dk: ["Danija", "Kopenhaga"],
+        fr: ["Prancūzija", "Paryžius"],
+        de: ["Vokietija", "Berlynas"],
+        pt: ["Portugalija", "Lisabona"],
+        pl: ["Lenkija", "Varšuva"],
+        cz: ["Čekija", "Praha"],
+        gr: ["Graikija", "Atėnai"],
+        it: ["Italija", "Roma"],
+        at: ["Austrija", "Viena"],
+    };
+
+    output8 = "<table border='3px dotted black'>";
+    output8 += "<tr>";
+    output8 += "<th>"
+    output8 += "Kodas"
+    output8 += "</th>"
+    output8 += "<th>"
+    output8 += "Salis"
+    output8 += "</th>"
+    output8 += "<th>"
+    output8 += "Sostine"
+    output8 += "</th>"    
+    output8 += "</tr>"    
+
+    for (const country in salis2) {
+
+        td = "<td border='thin solid black'>"
+
+        output8 += "<tr>";
+        output8 += td + country + "</td>" + td + salis2[country][0] + "</td>" + td + salis2[country][1] + "</td>";
+        output8 += "</tr>";
+
+
+    }
+
+    output8 += "</table>"
+
+    document.getElementById("output8").innerHTML = output8
+
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
