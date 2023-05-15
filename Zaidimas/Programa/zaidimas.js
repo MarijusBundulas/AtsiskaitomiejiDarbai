@@ -1,0 +1,1 @@
+import {lentele, zodziai} from "./zaidimas1.js";
