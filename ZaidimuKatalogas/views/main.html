@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block h1 %}Zaidimai{% endblock %} 
+
+{% block content %}
+<main class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src="{{ paveiksliukas }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ pavadinimas }}</h5>
+          <p class="card-text">{{ aprasymas }}<br>{{ kaina }}</p>
+          <a href="http://localhost:3000" class="btn btn-primary">Back</a> <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+  </main>
+
+{% endblock %}
