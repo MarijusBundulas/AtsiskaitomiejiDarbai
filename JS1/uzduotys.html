@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>1 Uzduotis</h1>
+        <div id="isvedimas"></div>
+        <div id="isvedimas2"></div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="container2">
+        <h1>2 Uzduotis</h1>
+        <div id="output1"></div>
+        <div id="output2"></div>
+        <div id="output3"></div>
+        <div id="output4"></div>
+        <div id="output5"></div>
+        <div id="output6"></div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="container3">
+        <h1>3 Uzduotis</h1>
+        <div id="output7"></div>
+        <div id="output8"></div>
+        <div id="output9"></div>
+        <div id="output10"></div>
+        <div id="output11"></div>
+    </div>
+    
+    <script>
+
+    // 1 UZDUOTIS    
+    let isvedimas=" ";
+    let vardas="Marijus";
+    isvedimas += "<p>Vardas: <b>" + vardas + "</b></p>";
+    document.getElementById("isvedimas").innerHTML = isvedimas;
+
+    let isvedimas2=" ";
+    let pavarde="Bundulas";
+    isvedimas2 += "<p>Pavarde: <b>" + pavarde + "</b></p>";
+    document.getElementById("isvedimas2").innerHTML = isvedimas2;
+
+    </script>
+
+    <script>
+    // 2 UZDUOTIS
+    let output1=" ";
+    let name="Augustinas";
+    let Surname="Bubutis";
+    output1 += "<p>Vardas, Pavarde: <i>" + name + " " + Surname + "</i></p>";
+    document.getElementById("output1").innerHTML = output1;
+
+    let output2=" ";
+    let phonenumber="864588962";
+    output2 += "<p>Telefono numeris: <b>" + phonenumber + "</b></p>";
+    document.getElementById("output2").innerHTML = output2;
+
+    let output3=" "; 
+    let email="Augustinas1@gmail.com";
+    output3 += "Email:" + " " + "<a href='#'>" + email + "</a>"
+    document.getElementById("output3").innerHTML = output3;
+
+    let output4=" ";
+    let adress="lauku g. 7-20, Klaipeda";
+    output4 += "<p>Adresas:   " + adress + "</p>";
+    document.getElementById("output4").innerHTML = output4 ;
+    
+    let output5=" ";
+    let postcode="96357";
+    output5 += "<p>Pasto kodas:   " + postcode + "</p>";
+    document.getElementById("output5").innerHTML = output5  ;
+    
+    let output6=" ";
+    let comment="Prekes pristatymo duomenys";
+    output6 += "<p>Komentaras:   " + comment + "</p>";
+    document.getElementById("output6").innerHTML = output6 ;
+
+    </script>
+
+    <script>
+    // 3 UZDUOTIS    
+    let output7=" ";
+    let product="Plaktukas";
+    output7 += "<p><h2><b>" + product + "</b></h2></p>";
+    document.getElementById("output7").innerHTML = output7;
+
+    let output8=" ";
+    output8 += "<img src='plaktukas.jpg' height='300'> </img>";
+    document.getElementById("output8").innerHTML = output8;
+
+    let output9=" ";
+    let price="52.99$";
+    output9 += "<p><b>" + price + "</b></p>";
+    document.getElementById("output9").innerHTML = output9;
+
+    let output10=" ";
+    let text="Kaina atrodo didele, bet verta pirkti, nes kala gerai";
+    output10 += "<p><b><i>" + text + "</b</i></p>";
+    document.getElementById("output10").innerHTML = output10;
+
+    let output11=" ";
+    let link="Pirkti";
+    output11 += "<a href='https://www.senukai.lt/p/plaktukas-stanley-fmht1-51277-570-g/5hz6?mtd=search&pos=regular&src=searchnode'>" + link + "</a>";
+    document.getElementById("output11").innerHTML = output11;
+    
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
